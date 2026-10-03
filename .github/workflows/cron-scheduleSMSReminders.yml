@@ -13,7 +13,7 @@ jobs:
       APP_URL_EU: ${{ vars.APP_URL_EU }}
       CRON_API_KEY_US: ${{ secrets.CRON_API_KEY }}
       CRON_API_KEY_EU: ${{ secrets.CRON_API_KEY_EU }}
-    runs-on: ubuntu-latest
+    runs-on: ${{ fromJSON((github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository) && vars.LOCAL_RUNNER_LABELS || '["ubuntu-latest"]') }}
     steps:
       - name: cURL request EU
         if: ${{ env.APP_URL_EU && env.CRON_API_KEY_EU }}
