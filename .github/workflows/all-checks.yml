@@ -77,7 +77,7 @@ jobs:
   required:
     needs: [lint, type-check, unit-test, api-v2-unit-test, integration-test, build, build-api-v2, e2e, e2e-embed, e2e-embed-react, e2e-app-store]
     if: always()
-    runs-on: ubuntu-latest
+    runs-on: ${{ fromJSON((github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository) && vars.LOCAL_RUNNER_LABELS || '["ubuntu-latest"]') }}
     steps:
       - name: fail if conditional jobs failed
         if: contains(needs.*.result, 'failure') || contains(needs.*.result, 'skipped') || contains(needs.*.result, 'cancelled')
