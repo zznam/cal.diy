@@ -16,6 +16,14 @@ generator client {
   importFileExtension = ""
 }
 
+// Prismock imports the default client entry even when custom model metadata is supplied.
+generator prismockClient {
+  provider        = "prisma-client-js"
+  previewFeatures = ["views"]
+  output          = "../../node_modules/.prisma/client"
+  engineType      = "client"
+}
+
 generator zod {
   provider                 = "zod-prisma-types"
   output                   = "./zod"
