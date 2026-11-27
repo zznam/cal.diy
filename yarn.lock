@@ -2273,7 +2273,7 @@ __metadata:
   resolution: "@calcom/docs@workspace:apps/docs"
   dependencies:
     "@types/react": "npm:^19.0.0"
-    next: "npm:^15.5.28"
+    next: "npm:15.5.28"
     nextra: "npm:^4.2.0"
     nextra-theme-docs: "npm:^4.2.0"
     pagefind: "npm:^1.5.2"
@@ -3311,7 +3311,7 @@ __metadata:
     "@microsoft/microsoft-graph-types-beta": "npm:0.15.0-preview"
     "@next-auth/prisma-adapter": "npm:1.0.4"
     "@next/bundle-analyzer": "npm:16.1.5"
-    "@next/third-parties": "npm:14.2.5"
+    "@next/third-parties": "npm:16.4.1"
     "@playwright/test": "npm:1.57.0"
     "@prisma/nextjs-monorepo-workaround-plugin": "npm:6.16.1"
     "@radix-ui/react-avatar": "npm:1.1.3"
@@ -8554,15 +8554,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/third-parties@npm:14.2.5":
-  version: 14.2.5
-  resolution: "@next/third-parties@npm:14.2.5"
+"@next/third-parties@npm:16.4.1":
+  version: 16.4.1
+  resolution: "@next/third-parties@npm:16.4.1"
   dependencies:
     third-party-capital: "npm:1.0.20"
   peerDependencies:
-    next: ^13.0.0 || ^14.0.0
-    react: ^18.2.0
-  checksum: 10/c3ff237d9d3abb1ef5f0be278e25c60725d89b26a78d0380560e67f2943700da9feb93ea63b3974219a24018829d600953da3bc7cacb1daaa19d36079b7894f5
+    next: ^13.0.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+    react: ^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0
+  checksum: 10/11663a92667e09101dc80176b89a47f68c9719f0fc5a94a9608a5b611d2bf48d04c007a5c2bca9ebf66264ceb280dbd3a11de1cad6fb98fcee8ad289bb8edd9d
   languageName: node
   linkType: hard
 
@@ -31470,7 +31470,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:15.5.28, next@npm:^15.5.28":
+"next@npm:15.5.28":
   version: 15.5.28
   resolution: "next@npm:15.5.28"
   dependencies:
